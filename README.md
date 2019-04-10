@@ -22,6 +22,20 @@ Xcode should open and build the app. If it asks for a `Provisioning Profile`, se
 
 ### Deploying to Android
 
+Once the project is on a device with Android SDK (25>) installed, open the project in Unity and follow the following steps:
+
+1) Open `file > Build Settings`
+2) Switch to Android from the `Platform` menu
+3) Make sure the main scene is in `Scenes in Build`
+4) Go to `Player Settings`
+5) Under `XR Settings`, make sure `Viewforia Augmented Reality` is checked
+6) Under `Other Settings`, set `Bundle Identifier` to "com.AR4EVA4NOW.UTSDiscover"
+7) Under `Other Settings`, make sure `Android TV Compatability`, is unchecked
+8) Under `Other Settings`, make sure `Minimum API Level` is set to API Level 25
+9) Under `Build Settings` click `Build And Run`
+
+Make sure your Android phone is connected to your device, have USB Debugging enabled and accept the pop-up prompt. 
+
 ## Contributing
 ### Branches
 Branches should be named by `epic-name/ticket-name` using dashes where necessary. Ideally, each contributor should have their own branch per-ticket.
