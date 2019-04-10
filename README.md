@@ -1,5 +1,5 @@
 # UTS Discover
-UTS Discover is a promotional AR app for UTS Engineering & IT International.
+UTS Discover is a promotional AR app for UTS Engineering & IT International. 
 
 ## Deployment & Builds
 
@@ -21,18 +21,18 @@ Once the project is on an OSX device, open the project in Unity and follow the f
 Xcode should open and build the app. If it asks for a `Provisioning Profile`, set it to `Automatically Manage Signing`.
 
 ### Deploying to Android
-1) Open `file > Build Settings`
-2) Switch to Android from the `Platform` menu
-3) Go to `Player Settings`
-4) Under `XR Settings`, make sure `Viewforia Augmented Reality` is checked
-5) Under `Other Settings`, set `Bundle Identifier` to "com.AR4EVA4NOW.UTSDiscover"
-6) Under `Other Settings`, make sure `Android TV` is unchecked 
-7) Under `Other Settings`, make sure `Minimum API Level` is set to API Level 25 
-8) Under `Build Settings` click `Build And Run`
-
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+### Branches
+Branches should be named by `epic-name/ticket-name` using dashes where necessary. Ideally, each contributor should have their own branch per-ticket.
+
+### Pull-Requests
+When merging functionality at the end of a branch cycle, please:
+1) Create a pull-request with a description of the indended changes and functionality
+2) Inform another team member to pull and build it to confirm that it works as intended
+3) On confirmation of the working state, the testing team member will confirm and merge the request
+
+_Note: ideally the testing team member should have access to a platform other than yours (i.e. iOS, Android, Windows, OSX)_
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
