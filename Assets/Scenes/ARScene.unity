@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 325966491}
   - component: {fileID: 325966490}
   m_Layer: 0
-  m_Name: Button (2)
+  m_Name: InnovateButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 390409173}
   - component: {fileID: 390409172}
   m_Layer: 0
-  m_Name: Button
+  m_Name: WelcomeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 808705696}
   - component: {fileID: 808705695}
   m_Layer: 0
-  m_Name: Button (1)
+  m_Name: LocationButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -787,6 +787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheeseGrater
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99fb1ba567ac96a4a94344260c5d3547, type: 3}
+      propertyPath: m_Name
+      value: CheeseGraterModel
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99fb1ba567ac96a4a94344260c5d3547, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.01
@@ -967,7 +971,7 @@ GameObject:
   - component: {fileID: 1608748613}
   - component: {fileID: 1608748612}
   m_Layer: 0
-  m_Name: Button (3)
+  m_Name: StatsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
