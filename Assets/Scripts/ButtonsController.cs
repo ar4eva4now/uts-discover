@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * A class to help manage button actions.
+ */
 public class ButtonsController : MonoBehaviour
 {
     // GameObject fields
@@ -11,13 +14,14 @@ public class ButtonsController : MonoBehaviour
     
     private void Start()
     {
-        welcomeButton.onClick.AddListener(TaskOnClick);
+        welcomeButton.onClick.AddListener(DisplayWelcomeVideo);
     }
 
-    
-    private static void TaskOnClick()
+    /**
+     * A listener for the welcome function.
+     */
+    private static void DisplayWelcomeVideo()
     {
-        //Output this to console when Button1 or Button3 is clicked
-        Debug.Log("You have clicked the button!");
+        Debug.Log("Showing welcome video...");
     }
 }
