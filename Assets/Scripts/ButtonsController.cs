@@ -7,12 +7,11 @@ using UnityEngine.UI;
 public class ButtonsController : MonoBehaviour
 {
     // GameObject fields
+    public GameObject videoQuad;
     public Button welcomeButton;
     public Button locationButton;
     public Button innovationButton;
     public Button statsButton;
-
-    public GameObject videoQuad;
     
     private void Start()
     {
@@ -24,6 +23,7 @@ public class ButtonsController : MonoBehaviour
      */
     private void DisplayWelcomeVideo()
     {
+        // Hide or show the video quad
         videoQuad.SetActive(!videoQuad.activeSelf);
     }
 }
