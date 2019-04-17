@@ -8,10 +8,7 @@ public class ButtonsFaceCamera : MonoBehaviour
 
     void Update()
     {
-        Vector3 v = main_camera.transform.position - transform.position;
-
-        v.x = v.z = 0.0f;
-        transform.LookAt(main_camera.transform.position - v);
-        transform.Rotate(0, 180, 0);
+        transform.LookAt(transform.position + main_camera.transform.rotation * Vector3.forward, 
+                        main_camera.transform.rotation * Vector3.up);
     }
 }
