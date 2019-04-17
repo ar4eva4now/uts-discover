@@ -15,7 +15,7 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
     private TrackableBehaviour _trackableBehaviour;
 
     private void Start()
-    {
+    {   
         // Get the video player component
         _videoPlayer = GetComponent<VideoPlayer>();
         
@@ -27,7 +27,7 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
             _trackableBehaviour.RegisterTrackableEventHandler(this);
         }
     }
-    
+
     public void OnTrackableStateChanged(
         TrackableBehaviour.Status previousStatus,
         TrackableBehaviour.Status newStatus)

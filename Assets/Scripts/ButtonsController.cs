@@ -11,6 +11,8 @@ public class ButtonsController : MonoBehaviour
     public Button locationButton;
     public Button innovationButton;
     public Button statsButton;
+
+    public GameObject videoQuad;
     
     private void Start()
     {
@@ -20,8 +22,8 @@ public class ButtonsController : MonoBehaviour
     /**
      * A listener for the welcome function.
      */
-    private static void DisplayWelcomeVideo()
+    private void DisplayWelcomeVideo()
     {
-        Debug.Log("Showing welcome video...");
+        videoQuad.SetActive(!videoQuad.activeSelf);
     }
 }

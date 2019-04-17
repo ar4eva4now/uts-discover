@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 784758754}
   - component: {fileID: 784758753}
   - component: {fileID: 784758752}
+  - component: {fileID: 784758757}
   m_Layer: 5
   m_Name: WorldSpaceCanvas
   m_TagString: Untagged
@@ -650,6 +651,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1773896521}
+--- !u!114 &784758757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784758751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfedf68db1354519b71da80dcbf9f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  welcomeButton: {fileID: 1339937640}
+  locationButton: {fileID: 0}
+  innovationButton: {fileID: 0}
+  statsButton: {fileID: 0}
+  videoQuad: {fileID: 845004845}
 --- !u!1 &845004845
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &845004846
 Transform:
   m_ObjectHideFlags: 0
@@ -714,7 +732,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1
