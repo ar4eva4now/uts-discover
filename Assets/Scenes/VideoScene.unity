@@ -663,11 +663,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfedf68db1354519b71da80dcbf9f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  welcomeButton: {fileID: 1339937640}
-  locationButton: {fileID: 0}
-  innovationButton: {fileID: 0}
-  statsButton: {fileID: 0}
   videoQuad: {fileID: 845004845}
+  welcomeButton: {fileID: 1339937640}
+  locationButton: {fileID: 614892353}
+  innovationButton: {fileID: 2013770507}
+  statsButton: {fileID: 586252731}
 --- !u!1 &845004845
 GameObject:
   m_ObjectHideFlags: 0
