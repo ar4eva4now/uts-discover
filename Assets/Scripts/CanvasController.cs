@@ -11,11 +11,9 @@ public class CanvasController : MonoBehaviour
     private void Update()
     {
         // Make the buttons face the camera
-        var cameraPos = mainCamera.transform.position;
-        var v = cameraPos - transform.position;
-
-        v.x = v.z = 0.0f;
-        transform.LookAt(cameraPos - v);
-        transform.Rotate(0, 180, 0);
+        var cameraRotation = mainCamera.transform.rotation;
+        transform.LookAt(transform.position + cameraRotation * Vector3.forward, 
+            cameraRotation * Vector3.up);
     }
+
 }
