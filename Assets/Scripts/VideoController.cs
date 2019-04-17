@@ -1,16 +1,24 @@
 ﻿using UnityEngine;
+using UnityEngine.Video;
 using Vuforia;
 
+/**
+ * A class to help manage the video player actions for AR.
+ */
 public class VideoController : MonoBehaviour, ITrackableEventHandler
 {
     // GameObject fields
     public GameObject imageTarget;
     
     // Class fields
+    private VideoPlayer _videoPlayer;
     private TrackableBehaviour _trackableBehaviour;
 
     private void Start()
     {
+        // Get the video player component
+        _videoPlayer = GetComponent<VideoPlayer>();
+        
         // Get the image target's trackable
         _trackableBehaviour = imageTarget.GetComponent<TrackableBehaviour>();
         if (_trackableBehaviour)
@@ -30,12 +38,12 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
             // Play the video
-            Debug.Log("Playing video...");
+            _videoPlayer.Play();
         }
         else
         {
             // Pause or stop the video
-            Debug.Log("Stopping video...");
+            _videoPlayer.Pause();
         }
     }
 }
