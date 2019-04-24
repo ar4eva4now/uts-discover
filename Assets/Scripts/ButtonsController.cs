@@ -39,6 +39,7 @@ public class ButtonsController : MonoBehaviour
     {
         // Hide or show the stats quad
         statsQuad.SetActive(!statsQuad.activeSelf);
+        
     }
     
     /**
