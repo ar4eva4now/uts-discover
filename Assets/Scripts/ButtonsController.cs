@@ -15,12 +15,13 @@ public class ButtonsController : MonoBehaviour
     public Button innovationButton;
     public Button statsButton;
     public Button helpButton;
+
     
     private void Start()
     {
         welcomeButton.onClick.AddListener(DisplayWelcomeVideo);
         statsButton.onClick.AddListener(DisplayStatsAnimation);
-        helpButton.onClick.AddListener(DisplayHelpMenu);
+        //helpButton.onClick.AddListener(DisplayHelpMenu);
     }
 
     /**
@@ -44,12 +45,17 @@ public class ButtonsController : MonoBehaviour
     /**
      * A listener for the help menu function.
      */
-    private void DisplayHelpMenu()
-    {
+    //private void DisplayHelpMenu()
+    //{
         // Hide or show the stats quad
-        helpPanel.SetActive(!helpPanel.activeSelf);
-        var filePath = helpPanel.activeSelf ? "uts-discover-ui-exit" : "uts-discover-ui-help";
-        var sp  = Resources.Load<Sprite>(filePath);
-        helpButton.GetComponent<Image>().sprite = sp;
-    }
+        //helpPanel.SetActive(!helpPanel.activeSelf);
+        //var filePath = helpPanel.activeSelf ? "uts-discover-ui-exit" : "uts-discover-ui-help";
+        //var sp  = Resources.Load<Sprite>(filePath);
+        //helpButton.GetComponent<Image>().sprite = sp;
+    //    playHelpAnimation();
+    //}
+
+    //private void playHelpAnimation() {
+
+    //}
 }
