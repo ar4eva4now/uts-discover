@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 /**
- * A class to manage the button canvas.
+ * A class to manage the button canvas rotation.
  */
 public class CanvasController : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class CanvasController : MonoBehaviour
 
     private void Update()
     {
-        // Make the buttons face the camera
+        // Make the canvas face the camera
         var cameraRotation = mainCamera.transform.rotation;
         transform.LookAt(transform.position + cameraRotation * Vector3.forward, 
             cameraRotation * Vector3.up);
