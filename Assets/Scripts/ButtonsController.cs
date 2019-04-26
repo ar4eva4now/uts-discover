@@ -55,7 +55,4 @@ public class ButtonsController : MonoBehaviour
     //    playHelpAnimation();
     //}
 
-    //private void playHelpAnimation() {
-
-    //}
 }
