@@ -27,6 +27,15 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
             _trackableBehaviour.RegisterTrackableEventHandler(this);
         }
     }
+    
+    /**
+     * A public function to toggle the gameObject's display.
+     */
+    public void ToggleDisplay()
+    {
+        // Hide or show the encapsulating object
+        gameObject.SetActive(!gameObject.activeSelf);
+    }
 
     public void OnTrackableStateChanged(
         TrackableBehaviour.Status previousStatus,
