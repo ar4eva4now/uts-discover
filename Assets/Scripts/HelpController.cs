@@ -9,20 +9,26 @@ public class HelpController : MonoBehaviour
     // GameObject fields
     public Button helpButton;
     
+    // Symbol fields
+    private static readonly int SlideIn = Animator.StringToHash("SlideIn");
+
     /**
      * A public function to toggle the gameObject's display and update
      * the UI appropriately.
      */
     public void ToggleDisplay()
     {
-        // Hide or show the encapsulating gameObject
-        var obj = gameObject;
-        obj.SetActive(!obj.activeSelf);
+        var animator = gameObject.GetComponent<Animator>();
         
+        // Play the slide in animation if the component is accessible
+        if (animator == null) return;
+        var isSlideIn = animator.GetBool(SlideIn);
+        animator.SetBool(SlideIn, !isSlideIn);
+            
         // Load the appropriate button sprite
-        var filePath = obj.activeSelf ? "uts-discover-ui-exit" : "uts-discover-ui-help";
+        var filePath = isSlideIn ? "uts-discover-ui-help" : "uts-discover-ui-exit";
         var sp  = Resources.Load<Sprite>(filePath);
-        
+            
         // Apply the button sprite
         helpButton.GetComponent<Image>().sprite = sp;
     }
