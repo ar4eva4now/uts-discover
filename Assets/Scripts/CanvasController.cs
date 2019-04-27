@@ -15,5 +15,4 @@ public class CanvasController : MonoBehaviour
         transform.LookAt(transform.position + cameraRotation * Vector3.forward, 
             cameraRotation * Vector3.up);
     }
-
 }
