@@ -13,6 +13,7 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
     // Class fields
     private VideoPlayer _videoPlayer;
     private TrackableBehaviour _trackableBehaviour;
+    private bool _pause = true;
 
     private void Start()
     {   
@@ -27,6 +28,24 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
             _trackableBehaviour.RegisterTrackableEventHandler(this);
         }
     }
+    
+    public void TogglePause(){
+        _pause = !_pause;
+    }
+
+    private void Update()
+    {
+        if (_pause)
+        {
+            // Pause the video
+            _videoPlayer.Pause();
+        }
+        else
+        {
+            // Play the video
+            _videoPlayer.Play();
+        }
+    }
 
     public void OnTrackableStateChanged(
         TrackableBehaviour.Status previousStatus,
@@ -37,8 +56,11 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
-            // Play the video
-            _videoPlayer.Play();
+            if (!_pause)
+            {
+                // Play the video
+                _videoPlayer.Play();
+            }
         }
         else
         {
