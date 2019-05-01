@@ -32,10 +32,17 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
         }
     }
     
+    /**
+     * A public method to toggle the pause functionality of the video.
+     * Also changes the pause button sprite.
+     */
     public void TogglePause()
     {
+        // Change the pause state
         _isPaused = !_isPaused;
-
+        
+        // Set the button sprite path and play/pause the video
+        var filePath = "uts-discover-ui-play";
         if (_isPaused)
         {
             _videoPlayer.Pause();
