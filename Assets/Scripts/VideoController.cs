@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.Video;
 using Vuforia;
+using Image = UnityEngine.UI.Image;
 
 /**
  * A class to help manage the video player actions for AR.
@@ -15,7 +16,6 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
     // Class fields
     private VideoPlayer _videoPlayer;
     private TrackableBehaviour _trackableBehaviour;
-    
     private bool _isPaused;
 
     private void Start()
@@ -43,14 +43,14 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
         else
         {
             _videoPlayer.Play();
+            filePath = "uts-discover-ui-pause";
         }
         
-//        // Load the appropriate button sprite
-//        var filePath = _videoPlayer.isPaused ? "uts-discover-ui-play" : "uts-discover-ui-pause";
-//        var sp  = Resources.Load<Sprite>(filePath);
-//            
-//        // Apply the button sprite
-//        pauseButton.GetComponent<Image>().sprite = sp;
+        // Load the appropriate button sprite
+        var sp  = Resources.Load<Sprite>(filePath);
+            
+        // Apply the button sprite
+        pauseButton.GetComponent<Image>().sprite = sp;
     }
 
     public void OnTrackableStateChanged(

@@ -1184,6 +1184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageTarget: {fileID: 1387533595}
+  pauseButton: {fileID: 285699898}
 --- !u!114 &845004852
 MonoBehaviour:
   m_ObjectHideFlags: 0
