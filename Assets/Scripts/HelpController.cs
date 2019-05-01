@@ -16,7 +16,7 @@ public class HelpController : MonoBehaviour
      * A public function to toggle the gameObject's display and update
      * the UI appropriately.
      */
-    public void ToggleDisplay()
+    public void ToggleOpen()
     {
         var animator = gameObject.GetComponent<Animator>();
         

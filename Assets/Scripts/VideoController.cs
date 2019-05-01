@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 using Vuforia;
+using Image = UnityEngine.UI.Image;
 
 /**
  * A class to help manage the video player actions for AR.
@@ -9,10 +11,12 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
 {
     // GameObject fields
     public GameObject imageTarget;
+    public Button pauseButton;
     
     // Class fields
     private VideoPlayer _videoPlayer;
     private TrackableBehaviour _trackableBehaviour;
+    private bool _isPaused;
 
     private void Start()
     {   
@@ -29,18 +33,38 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
     }
     
     /**
-     * A public function to toggle the gameObject's display.
+     * A public method to toggle the pause functionality of the video.
+     * Also changes the pause button sprite.
      */
-    public void ToggleDisplay()
+    public void TogglePause()
     {
-        // Hide or show the encapsulating object
-        gameObject.SetActive(!gameObject.activeSelf);
+        // Change the pause state
+        _isPaused = !_isPaused;
+        
+        // Set the button sprite path and play/pause the video
+        var filePath = "uts-discover-ui-play";
+        if (_isPaused)
+        {
+            _videoPlayer.Pause();
+        }
+        else
+        {
+            _videoPlayer.Play();
+            filePath = "uts-discover-ui-pause";
+        }
+        
+        // Load the appropriate button sprite
+        var sp  = Resources.Load<Sprite>(filePath);
+            
+        // Apply the button sprite
+        pauseButton.GetComponent<Image>().sprite = sp;
     }
 
     public void OnTrackableStateChanged(
         TrackableBehaviour.Status previousStatus,
         TrackableBehaviour.Status newStatus)
     {
+        if (_isPaused) return;
         // On state change for detection
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
