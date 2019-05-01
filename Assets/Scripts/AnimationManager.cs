@@ -9,6 +9,14 @@ public class AnimationManager : MonoBehaviour
     public Animator anim;
     public float wait;
 
+    public bool startAtZero;
+
+    private void Start() {
+        if (startAtZero){
+            transform.localScale = new Vector3(0,0,0);
+        }
+    }
+
     private void Update() {
         StartCoroutine(AnimationDelay());
     }
