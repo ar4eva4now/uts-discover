@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 using Vuforia;
 
@@ -9,11 +10,13 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
 {
     // GameObject fields
     public GameObject imageTarget;
+    public Button pauseButton;
     
     // Class fields
     private VideoPlayer _videoPlayer;
     private TrackableBehaviour _trackableBehaviour;
-    private bool _pause = true;
+    
+    private bool _isPaused;
 
     private void Start()
     {   
@@ -29,38 +32,39 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
         }
     }
     
-    public void TogglePause(){
-        _pause = !_pause;
-    }
-
-    private void Update()
+    public void TogglePause()
     {
-        if (_pause)
+        _isPaused = !_isPaused;
+
+        if (_isPaused)
         {
-            // Pause the video
             _videoPlayer.Pause();
         }
         else
         {
-            // Play the video
             _videoPlayer.Play();
         }
+        
+//        // Load the appropriate button sprite
+//        var filePath = _videoPlayer.isPaused ? "uts-discover-ui-play" : "uts-discover-ui-pause";
+//        var sp  = Resources.Load<Sprite>(filePath);
+//            
+//        // Apply the button sprite
+//        pauseButton.GetComponent<Image>().sprite = sp;
     }
 
     public void OnTrackableStateChanged(
         TrackableBehaviour.Status previousStatus,
         TrackableBehaviour.Status newStatus)
     {
+        if (_isPaused) return;
         // On state change for detection
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
-            if (!_pause)
-            {
-                // Play the video
-                _videoPlayer.Play();
-            }
+            // Play the video
+            _videoPlayer.Play();
         }
         else
         {
