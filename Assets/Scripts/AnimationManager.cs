@@ -24,7 +24,7 @@ public class AnimationManager : MonoBehaviour
     /*
      *  Delay start of an animation by user-specified wait time.
      */
-    private IEnumerator AnimationDelay(){
+    private IEnumerator AnimationDelay() {
         anim.enabled = false;
         yield return new WaitForSeconds(wait);
         // ReSharper disable once Unity.InefficientPropertyAccess
