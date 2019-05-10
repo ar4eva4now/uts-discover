@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using Vuforia;
@@ -30,6 +31,7 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
             // Register it with the handler
             _trackableBehaviour.RegisterTrackableEventHandler(this);
         }
+
     }
     
     /**
@@ -71,6 +73,7 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
             // Play the video
+            //StartCoroutine(Delay(1));
             _videoPlayer.Play();
         }
         else
@@ -78,5 +81,9 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
             // Pause or stop the video
             _videoPlayer.Pause();
         }
+    }
+
+    private IEnumerator Delay(int wait) {
+        yield return new WaitForSeconds(wait);
     }
 }
