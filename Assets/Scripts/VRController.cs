@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VRAccelerator : MonoBehaviour
+public class VRController : MonoBehaviour
 {
     GameObject camParent;
     // Update is called once per frame
@@ -13,15 +13,10 @@ public class VRAccelerator : MonoBehaviour
         this.transform.parent = camParent.transform;
         Input.gyro.enabled = true;
     }
+    
     void Update()
     {
         camParent.transform.Rotate(0, -Input.gyro.rotationRateUnbiased.y * 1.8f, -Input.gyro.rotationRateUnbiased.z * (1f / 20f));
         this.transform.Rotate(-Input.gyro.rotationRateUnbiased.x * 1.8f, 0, 0);
-    }
-
-    public void ChangeSphere(GameObject newSphere)
-    {
-        Debug.Log("AAAAAA");
-        camParent.transform.position = newSphere.transform.position;    
     }
 }
