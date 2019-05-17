@@ -8,13 +8,11 @@ public class CanvasController : MonoBehaviour
     // GameObject fields
     public Camera mainCamera;
 
-    private void LateUpdate()
+    private void Update()
     {
         // Make the canvas face the camera
         var cameraRotation = mainCamera.transform.rotation;
-        var frontVector = transform.position + cameraRotation * Vector3.forward;
-        var upVector = cameraRotation * Vector3.up;
-        
-        transform.LookAt(frontVector, upVector);
+        transform.LookAt(transform.position + cameraRotation * Vector3.forward, 
+            cameraRotation * Vector3.up);
     }
 }
