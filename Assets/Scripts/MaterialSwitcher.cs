@@ -1,15 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class VRTextureSwitcher : MonoBehaviour
+public class MaterialSwitcher : MonoBehaviour
 {
     public Material newMaterial;
+    
+    private GameObject _switchObject;
+
+    private void Start()
+    {
+        _switchObject = GameObject.Find("VRSphere");
+    }
 
     public void SwitchMaterial()
     {
-        var mats = GetComponent<Renderer>().materials;
+        var mats = _switchObject.GetComponent<Renderer>().materials;
         mats[0] = newMaterial;
-        GetComponent<Renderer>().materials = mats;
+        _switchObject.GetComponent<Renderer>().materials = mats;
     }
 }
