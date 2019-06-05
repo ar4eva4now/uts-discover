@@ -434,7 +434,6 @@ GameObject:
   - component: {fileID: 412335753}
   - component: {fileID: 412335752}
   - component: {fileID: 412335751}
-  - component: {fileID: 412335750}
   m_Layer: 0
   m_Name: LobbyButton
   m_TagString: Untagged
@@ -462,19 +461,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.3, y: 0.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &412335750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412335748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dfb1317009d543ceb4f36b338636174, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newMaterial: {fileID: 2100000, guid: a393fe895640fb8489a1a8d5350916e2, type: 2}
 --- !u!114 &412335751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,12 +504,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412335750}
+      - m_Target: {fileID: 1430485363}
         m_MethodName: SwitchMaterial
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2100000, guid: a393fe895640fb8489a1a8d5350916e2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -789,7 +776,6 @@ GameObject:
   - component: {fileID: 908079996}
   - component: {fileID: 908079995}
   - component: {fileID: 908079994}
-  - component: {fileID: 908079993}
   m_Layer: 0
   m_Name: LobbyButton
   m_TagString: Untagged
@@ -817,19 +803,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.3, y: 0.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &908079993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 908079991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dfb1317009d543ceb4f36b338636174, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newMaterial: {fileID: 2100000, guid: a393fe895640fb8489a1a8d5350916e2, type: 2}
 --- !u!114 &908079994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,12 +846,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 908079993}
+      - m_Target: {fileID: 1430485363}
         m_MethodName: SwitchMaterial
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2100000, guid: a393fe895640fb8489a1a8d5350916e2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1073,7 +1047,6 @@ GameObject:
   - component: {fileID: 940959442}
   - component: {fileID: 940959440}
   - component: {fileID: 940959441}
-  - component: {fileID: 940959444}
   m_Layer: 0
   m_Name: DataArenaButton
   m_TagString: Untagged
@@ -1163,11 +1136,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 940959444}
+      - m_Target: {fileID: 1430485363}
         m_MethodName: SwitchMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 85c9ea0ec8bc445e69ac8433695ed638,
+          m_ObjectArgument: {fileID: 2100000, guid: be0eeedde7516624394c1597c4a93092,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -1236,18 +1209,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940959438}
   m_CullTransparentMesh: 0
---- !u!114 &940959444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940959438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dfb1317009d543ceb4f36b338636174, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &941369602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1509,7 @@ GameObject:
   - component: {fileID: 1430485366}
   - component: {fileID: 1430485365}
   - component: {fileID: 1430485364}
+  - component: {fileID: 1430485363}
   m_Layer: 0
   m_Name: VRSphere
   m_TagString: Untagged
@@ -1555,6 +1517,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1430485363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430485362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dfb1317009d543ceb4f36b338636174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &1430485364
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1919,7 +1893,6 @@ GameObject:
   - component: {fileID: 1688676564}
   - component: {fileID: 1688676563}
   - component: {fileID: 1688676562}
-  - component: {fileID: 1688676561}
   m_Layer: 0
   m_Name: AlumniGreenButton
   m_TagString: Untagged
@@ -1947,18 +1920,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.3, y: 0.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1688676561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688676559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dfb1317009d543ceb4f36b338636174, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1688676562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2002,11 +1963,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1688676561}
+      - m_Target: {fileID: 1430485363}
         m_MethodName: SwitchMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: a393fe895640fb8489a1a8d5350916e2,
+          m_ObjectArgument: {fileID: 2100000, guid: 85c9ea0ec8bc445e69ac8433695ed638,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -2454,7 +2415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235de59a6c779af47ba499672834e58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 930725907}
 --- !u!114 &1944919714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2587,7 +2547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235de59a6c779af47ba499672834e58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 930725907}
 --- !u!114 &2070549625
 MonoBehaviour:
   m_ObjectHideFlags: 0
