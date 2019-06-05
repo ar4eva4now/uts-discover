@@ -498,10 +498,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 940959444}
         m_MethodName: SwitchMaterial
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2100000, guid: 85c9ea0ec8bc445e69ac8433695ed638,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -558,7 +559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfb1317009d543ceb4f36b338636174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newMaterial: {fileID: 2100000, guid: be0eeedde7516624394c1597c4a93092, type: 2}
 --- !u!1 &941369602
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235de59a6c779af47ba499672834e58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 930725907}
 --- !u!114 &941369606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,7 +842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235de59a6c779af47ba499672834e58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 930725907}
 --- !u!114 &1578418021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,7 +954,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfb1317009d543ceb4f36b338636174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newMaterial: {fileID: 2100000, guid: 85c9ea0ec8bc445e69ac8433695ed638, type: 2}
 --- !u!114 &1688676562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,10 +999,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1688676561}
         m_MethodName: SwitchMaterial
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2100000, guid: a393fe895640fb8489a1a8d5350916e2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

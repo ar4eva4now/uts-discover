@@ -7,18 +7,24 @@ using UnityEngine.UI;
 public class HelpController : MonoBehaviour
 {
     // GameObject fields
-    public Button helpButton;
-    public Canvas parent;
+    private Button helpButton;
+    private Canvas screenCanvas;
 
     // Symbol fields
     private static readonly int SlideIn = Animator.StringToHash("SlideIn");
 
+    private void Start()
+    {
+        screenCanvas = GameObject.Find("GameOverlayCanvas").GetComponent<Canvas>();
+        helpButton = GameObject.Find("Help Button").GetComponent<Button>();
+    }
+
     /**
      * Adjust the size of the panel to suit the canvas size.
      */
-    private void Update()
+    private void FixedUpdate()
     {
-        Rect rootCanvasRect = parent.GetComponent<RectTransform>().rect; //Gets the Sizing of the RectTransform
+        Rect rootCanvasRect = screenCanvas.GetComponent<RectTransform>().rect; //Gets the Sizing of the RectTransform
         RectTransform panelRect = gameObject.GetComponent<RectTransform>(); // Gets the RectTransform (to manipulate the size of the panel);
         panelRect.sizeDelta = new Vector2(rootCanvasRect.width, rootCanvasRect.height); // Adjust the size of the panel
     }
@@ -47,31 +53,4 @@ public class HelpController : MonoBehaviour
         // Apply the button sprite
         helpButton.GetComponent<Image>().sprite = sp;
     }
-
-    //// GameObject fields
-    //public Button helpButton;
-
-    //// Symbol fields
-    //private static readonly int SlideIn = Animator.StringToHash("SlideIn");
-
-    ///**
-    // * A public function to toggle the gameObject's display and update
-    // * the UI appropriately.
-    // */
-    //public void ToggleOpen()
-    //{
-    //    var animator = gameObject.GetComponent<Animator>();
-
-    //    // Play the slide in animation if the component is accessible
-    //    if (animator == null) return;
-    //    var isSlideIn = animator.GetBool(SlideIn);
-    //    animator.SetBool(SlideIn, !isSlideIn);
-
-    //    // Load the appropriate button sprite
-    //    var filePath = isSlideIn ? "uts-discover-ui-help" : "uts-discover-ui-exit";
-    //    var sp  = Resources.Load<Sprite>(filePath);
-
-    //    // Apply the button sprite
-    //    helpButton.GetComponent<Image>().sprite = sp;
-    //}
 }

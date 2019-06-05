@@ -7,17 +7,17 @@ using Image = UnityEngine.UI.Image;
 
 public class VuforiaAnimManager : MonoBehaviour, ITrackableEventHandler
 {
-    public GameObject imageTarget;
+    private GameObject imageTarget;
     private TrackableBehaviour _trackableBehaviour;
-    public Animator anim;
+    private Animator anim;
     private bool _isFirstLoad;
     public float wait;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        anim = GetComponent<Animator>();
+        imageTarget = GameObject.Find("ImageTarget");
+        anim = this.GetComponent<Animator>();
         anim.enabled = false;
 
         // Get the image target's trackable
@@ -28,12 +28,6 @@ public class VuforiaAnimManager : MonoBehaviour, ITrackableEventHandler
             _trackableBehaviour.RegisterTrackableEventHandler(this);
         }
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
      public void OnTrackableStateChanged(
@@ -49,7 +43,6 @@ public class VuforiaAnimManager : MonoBehaviour, ITrackableEventHandler
             // Play animation
             StartCoroutine(AnimationDelay());
             //anim.enabled = true;
-            
         }
         else
         {
@@ -61,7 +54,6 @@ public class VuforiaAnimManager : MonoBehaviour, ITrackableEventHandler
     private IEnumerator AnimationDelay(){
         anim.enabled = false;
         yield return new WaitForSeconds(wait);
-        // ReSharper disable once Unity.InefficientPropertyAccess
         anim.enabled = true;
     }
 }
