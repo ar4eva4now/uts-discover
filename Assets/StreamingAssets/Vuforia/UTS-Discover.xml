@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="UTSDiscoverSurfaceFront" size="0.099000 0.089615" />
-    <ImageTarget name="UTSDiscoverSurfaceBack" size="0.210000 0.095995" />
+    <ImageTarget name="UTSDiscoverFrontSurface" size="1.000000 0.389087" />
   </Tracking>
 </QCARConfig>
