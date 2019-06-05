@@ -2,19 +2,10 @@
 
 public class MaterialSwitcher : MonoBehaviour
 {
-    public Material newMaterial;
-    
-    private GameObject _switchObject;
-
-    private void Start()
+    public void SwitchMaterial(Material newMaterial)
     {
-        _switchObject = GameObject.Find("VRSphere");
-    }
-
-    public void SwitchMaterial()
-    {
-        var mats = _switchObject.GetComponent<Renderer>().materials;
+        var mats = this.GetComponent<Renderer>().materials;
         mats[0] = newMaterial;
-        _switchObject.GetComponent<Renderer>().materials = mats;
+        this.GetComponent<Renderer>().materials = mats;
     }
 }

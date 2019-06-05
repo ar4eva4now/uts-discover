@@ -10,13 +10,13 @@ using Image = UnityEngine.UI.Image;
 public class VideoController : MonoBehaviour, ITrackableEventHandler
 {
     // GameObject fields
-    public GameObject imageTarget;
-    public Button pauseButton;
+    private GameObject imageTarget;
+    private Button pauseButton;
     
     // Class fields
     private VideoPlayer _videoPlayer;
     private TrackableBehaviour _trackableBehaviour;
-    private bool _isPaused;
+    private bool _isPaused = false;
 
     private void Start()
     {   
@@ -24,6 +24,9 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
         _videoPlayer = GetComponent<VideoPlayer>();
         
         // Get the image target's trackable
+        imageTarget = GameObject.Find("ImageTarget");
+        pauseButton = GameObject.FindGameObjectWithTag("PauseButton").GetComponent<Button>();
+
         _trackableBehaviour = imageTarget.GetComponent<TrackableBehaviour>();
         if (_trackableBehaviour)
         {

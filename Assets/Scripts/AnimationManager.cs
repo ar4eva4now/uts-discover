@@ -17,7 +17,7 @@ public class AnimationManager : MonoBehaviour
         }
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         StartCoroutine(AnimationDelay());
     }
 

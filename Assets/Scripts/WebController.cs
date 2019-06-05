@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WebController : MonoBehaviour
 {
-    public void OpenWebsite()
+    public void OpenWebsite(string website)
     {
-        Application.OpenURL("https://www.uts.edu.au/about/faculty-engineering-and-information-technology");
+        Application.OpenURL(website);
     }
 }

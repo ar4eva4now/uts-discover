@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VRController : MonoBehaviour
+public class VRCamera : MonoBehaviour
 {
     GameObject camParent;
     // Update is called once per frame
