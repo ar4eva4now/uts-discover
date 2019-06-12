@@ -47,7 +47,7 @@ public class HelpController : MonoBehaviour
         animator.SetBool(SlideIn, !isSlideIn);
 
         // Load the appropriate button sprite
-        string filePath = isSlideIn ? "uts-discover-ui-help" : "uts-discover-ui-exit";
+        string filePath = isSlideIn ? "UI/uts-discover-ui-help" : "UI/uts-discover-ui-exit";
         Sprite sp  = Resources.Load<Sprite>(filePath);
 
         // Apply the button sprite
