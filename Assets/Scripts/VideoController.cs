@@ -45,7 +45,7 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
         _isPaused = !_isPaused;
         
         // Set the button sprite path and play/pause the video
-        var filePath = "uts-discover-ui-play";
+        var filePath = "UI/uts-discover-ui-play";
         if (_isPaused)
         {
             _videoPlayer.Pause();
@@ -53,7 +53,7 @@ public class VideoController : MonoBehaviour, ITrackableEventHandler
         else
         {
             _videoPlayer.Play();
-            filePath = "uts-discover-ui-pause";
+            filePath = "UI/uts-discover-ui-pause";
         }
         
         // Load the appropriate button sprite
