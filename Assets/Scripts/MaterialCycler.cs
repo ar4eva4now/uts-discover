@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 
-public class MaterialSwitcher : MonoBehaviour
+public class MaterialCycler : MonoBehaviour
 {
-    public void SwitchMaterial(Material newMaterial)
+    public Material[] materials;
+    
+    public void CycleMaterial()
     {
         var mats = this.GetComponent<Renderer>().materials;
-        mats[0] = newMaterial;
+        mats[0] = materials[0];
         this.GetComponent<Renderer>().materials = mats;
     }
 }
