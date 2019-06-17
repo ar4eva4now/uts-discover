@@ -21,7 +21,7 @@ public class MaterialCycler : MonoBehaviour
         var materialSwitcher = GetComponent<MaterialSwitcher>();
         materialSwitcher.SwitchMaterial(materials[_current]);
         
-        // Increment the value, clamping it between 0 and 2
-        _current = ++_current % 3;
+        // Increment the value, clamping it between 0 and the length of the list
+        _current = ++_current % materials.Length;
     }
 }
