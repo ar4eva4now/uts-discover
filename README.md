@@ -1,5 +1,5 @@
 # UTS Discover
-UTS Discover is a promotional AR app for UTS Engineering & IT International. 
+UTS Discover is an augmented reality (AR) experience for mobile devices that aims to promote the UTS Faculty of Engineering and IT (FEIT) to prospective international students. The AR4EVA4NOW team built the application in the UTS Software Studio as a real, client-driven project for the FEIT, utilising agile development practises. The app, built in Unity, uses AR target-recognition to display video content and 3D models, as well as gyroscopic data to deliver a 360 image tour of UTS campus.
 
 ## Deployment & Builds
 
